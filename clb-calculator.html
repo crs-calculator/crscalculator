@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLB Calculator: Convert IELTS, CELPIP, PTE, TEF and TCF to CLB</title>
+<meta name="description" content="Free CLB calculator: convert IELTS, CELPIP, PTE Core, TEF and TCF scores to CLB/NCLC levels per ability with official IRCC charts.">
+<link rel="canonical" href="https://crscalculator.pro/clb-calculator">
+<meta property="og:title" content="CLB Calculator: Convert Language Test Scores to CLB Levels">
+<meta property="og:description" content="Convert IELTS, CELPIP, PTE Core, TEF and TCF scores to CLB and NCLC levels with the official IRCC charts. Free, instant, no signup.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crscalculator.pro/clb-calculator">
+<meta property="og:image" content="https://crscalculator.pro/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CLB Calculator",
+  "url": "https://crscalculator.pro/clb-calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free CLB calculator. Convert IELTS General Training, CELPIP-General, PTE Core, TEF Canada and TCF Canada scores to CLB and NCLC levels using the official IRCC equivalency charts."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is CLB?", "acceptedAnswer": { "@type": "Answer", "text": "CLB stands for Canadian Language Benchmarks, the scale IRCC uses to describe English ability. NCLC (Niveaux de competence linguistique canadiens) is the equivalent scale for French. For Express Entry, CLB and NCLC levels run from 1 to 12, and CLB 10 is the top level that earns CRS points." } },
+    { "@type": "Question", "name": "Can I average my four test scores into one CLB level?", "acceptedAnswer": { "@type": "Answer", "text": "No. Each ability (listening, reading, writing, speaking) converts separately using the IRCC equivalency charts. There is no averaging and no overall-band conversion. Your lowest ability often decides which program minimums you meet and which CRS combinations you unlock." } },
+    { "@type": "Question", "name": "Is IELTS Academic accepted for Express Entry?", "acceptedAnswer": { "@type": "Answer", "text": "No. Only IELTS General Training is accepted. IELTS Academic and IELTS One Skill Retake are not accepted for Express Entry. Similarly, CELPIP-General LS and PTE Academic are not accepted; the accepted tests are CELPIP-General, IELTS General Training, PTE Core, TEF Canada and TCF Canada." } },
+    { "@type": "Question", "name": "Which score do I use from my TEF Canada results?", "acceptedAnswer": { "@type": "Answer", "text": "Use the Equivalence ancien score column on your TEF Canada results, never the Score out of 699 column. Using the wrong column gives the wrong NCLC level." } },
+    { "@type": "Question", "name": "How long are language test results valid?", "acceptedAnswer": { "@type": "Answer", "text": "Language test results must be less than two years old when you complete your Express Entry profile and when you apply for permanent residence. Plan a retake before your results expire if you are still in the pool." } },
+    { "@type": "Question", "name": "What CLB level do I need for Express Entry?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the program. The Federal Skilled Worker Program needs CLB or NCLC 7 in all four abilities. The Canadian Experience Class needs CLB 7 for TEER 0 and 1 jobs and CLB 5 for TEER 2 and 3 jobs. The Federal Skilled Trades Program needs CLB 5 in speaking and listening and CLB 4 in reading and writing." } }
+  ]
+}
+</script>
+<noscript><style>@media (max-width: 760px){.site-nav{display:flex !important;}.nav-drop-menu{display:block !important;position:static;box-shadow:none;border:0;}}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://crscalculator.pro/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CLB Calculator",
+      "item": "https://crscalculator.pro/clb-calculator"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">CRS<span>Calculator</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav" id="main-nav" aria-label="Main">
+      <a href="/#calculator">CRS Calculator</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true">Tools &#9662;</button>
+        <div class="nav-drop-menu">
+          <a href="/#calculator">CRS Calculator</a>
+          <a href="/clb-calculator">CLB Calculator</a>
+          <a href="/noc-lookup">NOC High-Wage Lookup</a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true">Guides &#9662;</button>
+        <div class="nav-drop-menu">
+          <a href="/what-is-crs-score">What Is the CRS Score?</a>
+          <a href="/crs-changes-november-2026">November 2026 CRS Changes</a>
+          <a href="/how-to-increase-crs-score">How to Increase Your CRS Score</a>
+          <a href="/crs-cut-off-scores">CRS Cut-Off Scores and Draws</a>
+          <a href="/fsw-67-points-grid">FSW 67-Point Grid</a>
+          <a href="/pnp-600-points">PNP 600 Points</a>
+          <a href="/category-based-draws">Category-Based Draws</a>
+          <a href="/canadian-experience-class">Canadian Experience Class</a>
+          <a href="/federal-skilled-trades">Federal Skilled Trades</a>
+          <a href="/eca-educational-credential-assessment">ECA Assessment</a>
+          <a href="/proof-of-funds">Proof of Funds</a>
+        </div>
+      </div>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="/">Home</a> / Tools / CLB Calculator</p>
+  <article class="page">
+    <h1>CLB Calculator: Convert Your Language Test Scores to CLB Levels</h1>
+    <p class="updated">Last updated: November 17, 2026. Conversion charts: IRCC language test results page, read November 2026.</p>
+    <p>Enter your scores from any accepted language test and see your Canadian Language Benchmarks (CLB) or NCLC levels for each ability, instantly. The conversion uses the official IRCC equivalency charts, and it also checks which Express Entry program language minimums your scores meet.</p>
+    <p>This page works as an IELTS to CLB calculator, a CELPIP CLB calculator, and a converter for PTE Core, TEF Canada and TCF Canada scores. Pick your test below, enter your scores, and your CLB or NCLC level appears for each ability.</p>
+
+    <div class="card">
+      <h2>Convert your scores</h2>
+      <label for="clb-test">Language test</label>
+      <select id="clb-test">
+        <option value="ielts">IELTS General Training</option>
+        <option value="celpip">CELPIP-General</option>
+        <option value="pte">PTE Core</option>
+        <option value="tef">TEF Canada (French)</option>
+        <option value="tcf">TCF Canada (French)</option>
+      </select>
+      <div class="grid-4">
+        <div>
+          <label for="clb-score-listening">Listening</label>
+          <input type="number" id="clb-score-listening" step="0.5" min="0" max="9" placeholder="e.g. 8.0" inputmode="decimal">
+        </div>
+        <div>
+          <label for="clb-score-reading">Reading</label>
+          <input type="number" id="clb-score-reading" step="0.5" min="0" max="9" placeholder="e.g. 7.0" inputmode="decimal">
+        </div>
+        <div>
+          <label for="clb-score-writing">Writing</label>
+          <input type="number" id="clb-score-writing" step="0.5" min="0" max="9" placeholder="e.g. 7.0" inputmode="decimal">
+        </div>
+        <div>
+          <label for="clb-score-speaking">Speaking</label>
+          <input type="number" id="clb-score-speaking" step="0.5" min="0" max="9" placeholder="e.g. 7.0" inputmode="decimal">
+        </div>
+      </div>
+      <p class="note" id="clb-note">Enter the score for each ability from your Test Report Form.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ability</th><th>Your score</th><th>CLB / NCLC level</th><th>First-language CRS points (without a spouse)</th></tr></thead>
+          <tbody id="clb-results-body"></tbody>
+          <tfoot><tr><td colspan="3"><strong>First-language points total</strong></td><td><strong id="clb-points-total">0</strong></td></tr></tfoot>
+        </table>
+      </div>
+      <p id="clb-summary" aria-live="polite"></p>
+      <h3>Program language minimums check</h3>
+      <ul class="tight" id="clb-minimums"></ul>
+      <p class="note">The points column shows first-language points for a candidate without an accompanying spouse. With an accompanying spouse the per-ability points are slightly lower. For your exact score, including spouse factors and skill transferability, use the <a href="/#calculator">CRS Calculator</a>.</p>
+    </div>
+
+    <h2>How CLB conversion works</h2>
+    <p>IRCC does not use your raw test scores directly. It converts each ability to a CLB level (for English) or NCLC level (for French) using equivalency charts, and then awards CRS points from those levels. Four rules matter:</p>
+    <ul class="tight">
+      <li><strong>Each ability converts separately.</strong> Listening, reading, writing and speaking each get their own level. A high listening score does not lift a low writing score.</li>
+      <li><strong>There is no averaging.</strong> IRCC does not average your four scores, and there is no overall-band conversion. Your lowest ability is often the one that decides which program minimums you meet.</li>
+      <li><strong>A score between two rows counts as the lower row.</strong> The tables below show the lowest score that reaches each level. If your score falls between two rows, you get the lower level.</li>
+      <li><strong>Results must be less than two years old</strong> when you complete your Express Entry profile and when you apply for permanent residence.</li>
+    </ul>
+    <p>The accepted tests are CELPIP-General, IELTS General Training, PTE Core, TEF Canada and TCF Canada. IELTS Academic, IELTS One Skill Retake, CELPIP-General LS and PTE Academic are not accepted for Express Entry. For TEF Canada, always use the Equivalence ancien score column on your results, never the score out of 699.</p>
+
+    <h2>IELTS to CLB Calculator: General Training Scores</h2>
+    <p>Lowest IELTS band reaching each CLB level, per ability.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>CLB level</th><th>Listening</th><th>Reading</th><th>Writing</th><th>Speaking</th></tr></thead>
+        <tbody>
+          <tr><td>CLB 4</td><td>4.5</td><td>3.5</td><td>4.0</td><td>4.0</td></tr>
+          <tr><td>CLB 5</td><td>5.0</td><td>4.0</td><td>5.0</td><td>5.0</td></tr>
+          <tr><td>CLB 6</td><td>5.5</td><td>5.0</td><td>5.5</td><td>5.5</td></tr>
+          <tr><td>CLB 7</td><td>6.0</td><td>6.0</td><td>6.0</td><td>6.0</td></tr>
+          <tr><td>CLB 8</td><td>7.5</td><td>6.5</td><td>6.5</td><td>6.5</td></tr>
+          <tr><td>CLB 9</td><td>8.0</td><td>7.0</td><td>7.0</td><td>7.0</td></tr>
+          <tr><td>CLB 10</td><td>8.5</td><td>8.0</td><td>7.5</td><td>7.5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Note the listening jump: IELTS listening 7.5 is needed for CLB 8, while the other abilities need only 6.5. Listening is the ability that most often holds candidates below CLB 8 or 9.</p>
+
+    <h2>CELPIP CLB Calculator: CELPIP-General Scores</h2>
+    <p>CELPIP-General scores equal CLB levels one to one in each ability: a CELPIP score of 7 is CLB 7, a score of 9 is CLB 9, and scores of 10, 11 and 12 all count as CLB 10. There is no separate table to look up.</p>
+
+    <h2>PTE Core to CLB</h2>
+    <p>Lowest PTE Core score (out of 90) reaching each CLB level, per ability.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>CLB level</th><th>Listening</th><th>Reading</th><th>Writing</th><th>Speaking</th></tr></thead>
+        <tbody>
+          <tr><td>CLB 4</td><td>28</td><td>33</td><td>41</td><td>42</td></tr>
+          <tr><td>CLB 5</td><td>39</td><td>42</td><td>51</td><td>51</td></tr>
+          <tr><td>CLB 6</td><td>50</td><td>51</td><td>60</td><td>59</td></tr>
+          <tr><td>CLB 7</td><td>60</td><td>60</td><td>69</td><td>68</td></tr>
+          <tr><td>CLB 8</td><td>71</td><td>69</td><td>79</td><td>76</td></tr>
+          <tr><td>CLB 9</td><td>82</td><td>78</td><td>88</td><td>84</td></tr>
+          <tr><td>CLB 10</td><td>89</td><td>88</td><td>90</td><td>89</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>TEF Canada to NCLC</h2>
+    <p>Lowest TEF Canada Equivalence ancien score reaching each NCLC level, per ability. Do not use the score out of 699.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NCLC level</th><th>Listening</th><th>Reading</th><th>Writing</th><th>Speaking</th></tr></thead>
+        <tbody>
+          <tr><td>NCLC 4</td><td>145</td><td>121</td><td>181</td><td>181</td></tr>
+          <tr><td>NCLC 5</td><td>181</td><td>151</td><td>226</td><td>226</td></tr>
+          <tr><td>NCLC 6</td><td>217</td><td>181</td><td>271</td><td>271</td></tr>
+          <tr><td>NCLC 7</td><td>249</td><td>207</td><td>310</td><td>310</td></tr>
+          <tr><td>NCLC 8</td><td>280</td><td>233</td><td>349</td><td>349</td></tr>
+          <tr><td>NCLC 9</td><td>298</td><td>248</td><td>371</td><td>371</td></tr>
+          <tr><td>NCLC 10</td><td>316</td><td>263</td><td>393</td><td>393</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>TCF Canada to NCLC</h2>
+    <p>Lowest TCF Canada score reaching each NCLC level. Listening and reading are out of 699; writing and speaking are out of 20.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NCLC level</th><th>Listening</th><th>Reading</th><th>Writing</th><th>Speaking</th></tr></thead>
+        <tbody>
+          <tr><td>NCLC 4</td><td>331</td><td>342</td><td>4</td><td>4</td></tr>
+          <tr><td>NCLC 5</td><td>369</td><td>375</td><td>6</td><td>6</td></tr>
+          <tr><td>NCLC 6</td><td>398</td><td>406</td><td>7</td><td>7</td></tr>
+          <tr><td>NCLC 7</td><td>458</td><td>453</td><td>10</td><td>10</td></tr>
+          <tr><td>NCLC 8</td><td>503</td><td>499</td><td>12</td><td>12</td></tr>
+          <tr><td>NCLC 9</td><td>523</td><td>524</td><td>14</td><td>14</td></tr>
+          <tr><td>NCLC 10</td><td>549</td><td>549</td><td>16</td><td>16</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>What your CLB level means for CRS points</h2>
+    <p>Your first official language is worth up to 136 points without a spouse and 128 with a spouse, at up to 34 or 32 points per ability. The points per ability are:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>CLB / NCLC level</th><th>Points per ability (with a spouse)</th><th>Points per ability (without a spouse)</th></tr></thead>
+        <tbody>
+          <tr><td>Below CLB 4</td><td>0</td><td>0</td></tr>
+          <tr><td>CLB 4 or 5</td><td>6</td><td>6</td></tr>
+          <tr><td>CLB 6</td><td>8</td><td>9</td></tr>
+          <tr><td>CLB 7</td><td>16</td><td>17</td></tr>
+          <tr><td>CLB 8</td><td>22</td><td>23</td></tr>
+          <tr><td>CLB 9</td><td>29</td><td>31</td></tr>
+          <tr><td>CLB 10</td><td>32</td><td>34</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>CLB 9 in all four abilities is the most valuable threshold in the whole CRS. Beyond the first-language points, it unlocks the higher skill transferability combinations, worth up to 50 points each. A single ability below CLB 9 keeps you on the lower combination rows, which is why retaking a test to lift one weak ability can be worth far more than the points for that ability alone. See <a href="/how-to-increase-crs-score">how to increase your CRS score</a> for the full picture.</p>
+
+    <h2>Program language minimums</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Program</th><th>First official language minimum</th></tr></thead>
+        <tbody>
+          <tr><td>Federal Skilled Worker Program</td><td>CLB or NCLC 7 in all four abilities</td></tr>
+          <tr><td><a href="/canadian-experience-class">Canadian Experience Class</a>, TEER 0 or 1 job</td><td>CLB or NCLC 7 in all four abilities</td></tr>
+          <tr><td>Canadian Experience Class, TEER 2 or 3 job</td><td>CLB or NCLC 5 in all four abilities</td></tr>
+          <tr><td><a href="/federal-skilled-trades">Federal Skilled Trades Program</a></td><td>CLB or NCLC 5 in speaking and listening, CLB or NCLC 4 in reading and writing</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Meeting a program minimum makes you eligible for that program. It does not guarantee an invitation: ranking in the pool is decided by your CRS score. The Federal Skilled Worker Program also uses a separate 100-point eligibility grid with a 67-point pass mark, explained in the <a href="/fsw-67-points-grid">FSW 67-point grid guide</a>.</p>
+
+    <div class="cta-box">
+      <p><strong>Got your CLB levels?</strong> Enter them in the CRS calculator to see your full score out of 1,270, with the Labour Market Integration factor and skill transferability breakdown.</p>
+      <a class="cta-btn" href="/#calculator">Check my CRS score</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <details class="faq">
+      <summary>What is CLB?</summary>
+      <p>CLB stands for Canadian Language Benchmarks, the scale IRCC uses to describe English ability. NCLC (Niveaux de competence linguistique canadiens) is the equivalent scale for French. For Express Entry, CLB and NCLC levels run from 1 to 12, and CLB 10 is the top level that earns CRS points.</p>
+    </details>
+    <details class="faq">
+      <summary>Can I average my four test scores into one CLB level?</summary>
+      <p>No. Each ability (listening, reading, writing, speaking) converts separately using the IRCC equivalency charts. There is no averaging and no overall-band conversion. Your lowest ability often decides which program minimums you meet and which CRS combinations you unlock.</p>
+    </details>
+    <details class="faq">
+      <summary>Is IELTS Academic accepted for Express Entry?</summary>
+      <p>No. Only IELTS General Training is accepted. IELTS Academic and IELTS One Skill Retake are not accepted for Express Entry. Similarly, CELPIP-General LS and PTE Academic are not accepted; the accepted tests are CELPIP-General, IELTS General Training, PTE Core, TEF Canada and TCF Canada.</p>
+    </details>
+    <details class="faq">
+      <summary>Which score do I use from my TEF Canada results?</summary>
+      <p>Use the Equivalence ancien score column on your TEF Canada results, never the Score out of 699 column. Using the wrong column gives the wrong NCLC level.</p>
+    </details>
+    <details class="faq">
+      <summary>How long are language test results valid?</summary>
+      <p>Language test results must be less than two years old when you complete your Express Entry profile and when you apply for permanent residence. Plan a retake before your results expire if you are still in the pool.</p>
+    </details>
+    <details class="faq">
+      <summary>What CLB level do I need for Express Entry?</summary>
+      <p>It depends on the program. The Federal Skilled Worker Program needs CLB or NCLC 7 in all four abilities. The Canadian Experience Class needs CLB 7 for TEER 0 and 1 jobs and CLB 5 for TEER 2 and 3 jobs. The Federal Skilled Trades Program needs CLB 5 in speaking and listening and CLB 4 in reading and writing.</p>
+    </details>
+
+    <div class="related">
+      <h2>Related tools and guides</h2>
+      <ul>
+        <li><a href="/#calculator">CRS Calculator</a>: your full score out of 1,270, with the new November 2026 grid.</li>
+        <li><a href="/what-is-crs-score">What Is the CRS Score?</a>: how the four CRS sections work.</li>
+        <li><a href="/fsw-67-points-grid">FSW 67-Point Grid</a>: the separate eligibility grid for the Federal Skilled Worker Program.</li>
+        <li><a href="/how-to-increase-crs-score">How to Increase Your CRS Score</a>: why CLB 9 matters so much.</li>
+      </ul>
+    </div>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Tools</h3>
+        <nav aria-label="Tools">
+          <a href="/#calculator">CRS Calculator</a>
+          <a href="/clb-calculator">CLB Calculator</a>
+          <a href="/noc-lookup">NOC High-Wage Lookup</a>
+        </nav>
+      </div>
+      <div>
+        <h3>Guides</h3>
+        <nav aria-label="Guides">
+          <a href="/what-is-crs-score">What Is the CRS Score?</a>
+          <a href="/crs-changes-november-2026">November 2026 CRS Changes</a>
+          <a href="/how-to-increase-crs-score">How to Increase Your CRS Score</a>
+          <a href="/crs-cut-off-scores">CRS Cut-Off Scores and Draws</a>
+          <a href="/fsw-67-points-grid">FSW 67-Point Grid</a>
+          <a href="/pnp-600-points">PNP 600 Points</a>
+          <a href="/category-based-draws">Category-Based Draws</a>
+          <a href="/canadian-experience-class">Canadian Experience Class</a>
+          <a href="/federal-skilled-trades">Federal Skilled Trades</a>
+          <a href="/eca-educational-credential-assessment">ECA Assessment</a>
+          <a href="/proof-of-funds">Proof of Funds</a>
+        </nav>
+      </div>
+      <div>
+        <h3>About this site</h3>
+        <nav aria-label="About this site">
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </nav>
+      </div>
+    </div>
+    <p>CRS Calculator is an independent estimate tool. It is not affiliated with, endorsed by, or connected to Immigration, Refugees and Citizenship Canada (IRCC) or the Government of Canada. Scoring rules are based on the IRCC CRS criteria, Express Entry changes, high-wage occupations and language test pages, read in November 2026. Always confirm your score with the official IRCC CRS tool and a licensed immigration professional.</p>
+    <p>All calculations happen in your browser. This site does not collect or store your inputs.</p>
+  </div>
+</footer>
+<script src="crs-engine.js"></script>
+<script src="clb-app.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

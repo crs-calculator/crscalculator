@@ -1,0 +1,10 @@
+# Never upload these as public assets
+.git
+.git/**
+.wrangler
+wrangler.toml
+.gitignore
+.assetsignore
+README.md
+node_modules
+.DS_Store
