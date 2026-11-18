@@ -18,3 +18,4 @@ Pushes to `main` deploy automatically through Cloudflare Workers Builds. The Wor
 - `sitemap.xml`, `robots.txt`, `og-image.png`
 
 All scoring facts are verified against official IRCC pages on canada.ca.
+Deploys automatically to Cloudflare Workers on every push to main.
