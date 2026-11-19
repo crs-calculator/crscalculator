@@ -173,7 +173,8 @@
     // Labour Market Integration: max of work route and job offer route.
     var canYears = clampInt(input.canWorkYears, 0, 5, 0);
     var workLength = WORK_LENGTH[withSpouse ? 'spouse' : 'single'][canYears];
-    var bonus = HIGH_WAGE_BONUS[input.highWageTier] || 0;
+    // High-wage bonus needs at least 12 months (1+ years) of qualifying Canadian work.
+    var bonus = canYears >= 1 ? (HIGH_WAGE_BONUS[input.highWageTier] || 0) : 0;
     var workRoute = workLength + bonus;
     var offerPts = JOB_OFFER[input.jobOfferTier] || 0;
     var lmiCap = withSpouse ? 140 : 150;

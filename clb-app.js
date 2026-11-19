@@ -70,15 +70,17 @@
     var totalPoints = 0;
     ABILITIES.forEach(function (a, i) {
       var tr = document.createElement('tr');
+      var enteredRow = scores[a] !== '';
       var level = clbs[i];
-      var levelText = level >= 4 ? label + ' ' + level : 'Below ' + label + ' 4';
-      var pts = firstLangPointsSingle(level);
-      totalPoints += pts;
+      var levelText = !enteredRow ? 'Not entered' : (level >= 4 ? label + ' ' + level : 'Below ' + label + ' 4');
+      var pts = enteredRow ? firstLangPointsSingle(level) : null;
+      if (pts !== null) totalPoints += pts;
       var scoreText = scores[a] === '' ? 'Not entered' : scores[a];
-      tr.innerHTML = '<td>' + ABILITY_LABELS[a] + '</td><td>' + scoreText + '</td><td><strong>' + levelText + '</strong></td><td>' + pts + '</td>';
+      tr.innerHTML = '<td>' + ABILITY_LABELS[a] + '</td><td>' + scoreText + '</td><td><strong>' + levelText + '</strong></td><td>' + (pts === null ? '-' : pts) + '</td>';
       body.appendChild(tr);
     });
-    $('clb-points-total').textContent = totalPoints;
+    // Do not show a points total until all four scores are entered.
+    $('clb-points-total').textContent = entered < 4 ? '-' : totalPoints;
 
     var summary = $('clb-summary');
     var minimums = $('clb-minimums');
